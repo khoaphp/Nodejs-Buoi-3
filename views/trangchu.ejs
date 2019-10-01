@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".cap1").click(function(){
+            $(this).next().slideToggle();
+        });
+    });
+    </script>
+    <style>
+        #menu{width:300px}
+        .cap1{cursor:pointer;background-color: red; color: yellow; padding:5px}
+        .cap2{background-color: blue;color:white; padding:5px; padding-left: 10px}
+    </style>
+</head>
+<body>
+
+<div id="menu">
+<% menu.forEach(function(cap1){ %>
+    <div class="cap1"><%= cap1.TEN %></div>
+    <div>
+        <% cap1.CON.forEach(function(cap2){ %>
+            <div class="cap2"><%= cap2.TEN %></div>
+        <% }); %>
+    </div>
+
+<% }); %>
+</div>
+
+</body>
+</html>

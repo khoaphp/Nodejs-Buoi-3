@@ -1,0 +1,22 @@
+<% danhsach.forEach(function(sv){ %>
+
+<h2> <%= sv.HOTEN %> </h2>
+
+<% }); %>
+
+
+
+<% for(var a=0; a<mang.length ; a++){ %>
+<div> <%= mang[a] %> </div>
+<% } %>
+
+<h2 style="color:<%= mau %>"><%= name %></h2>
+
+<% if( (2019-namsinh)>18 ) { %>
+<h2><%= namsinh %></h2>
+<% }else{ %>
+<h2> Ban chua du tuoi </h2>
+<% } %>
+
+
+
